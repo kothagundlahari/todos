@@ -1,13 +1,13 @@
 import 'babel-polyfill';
 import React from 'react';
 import {
-    render,
+    render
 } from 'react-dom';
 import {
-    Provider,
+    Provider
 } from 'react-redux';
 import {
-    createStore,
+    createStore
 } from 'redux';
 import todoApp from './reducers';
 import App from './components/App';
@@ -16,15 +16,15 @@ const persistedState = {
     todos: [{
         id: 0,
         text: 'Welcome Back!',
-        completed: false,
-    }],
+        completed: false
+    }]
 };
 
 const store = createStore(
     todoApp,
     persistedState
 );
-console.log(store.getState());
+// console.log(store.getState());
 
 render( <
     Provider store = { store } >
